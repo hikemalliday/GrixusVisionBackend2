@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up SSH
-        run: /
+        run: |
           mkdir ~/.ssh/
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
@@ -19,5 +19,5 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: SSH into server and update
-        run: /
+        run: |
           ssh -o StrictHostKeyChecking=no mike@45.55.129.24 -t "/home/mike/projects/GrixusVisionBackend2/update.sh"
