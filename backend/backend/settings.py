@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 
+
 from datetime import timedelta
 from pathlib import Path
 from .config import CONFIG_SECRET_KEY
